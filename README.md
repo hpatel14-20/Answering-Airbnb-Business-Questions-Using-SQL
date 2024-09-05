@@ -1,3 +1,17 @@
+## Key Takeaways
+1. The top 3 most expensive neighbhorhoods are Fort Wadsworth, Woodrow and Tribeca.
+2. The cheapest neighbhorhoods are Bull's Head, Hunts Point and Tremont
+3. There is no correlation betwee the price or number of reviews and availability in a 365 day period.
+4. Business Question 1: What listings are the most problematic and generate lower revenues?
+  - We successfully extracted listings that the executive team would consideer probelmatic and generate lower revenue. Problematic listings are listings that have an average monthly availability of greater than 15.
+5. The executive team also needed to know what % of listings are problematic. 30% of listings have a average monthly availability greater than 15
+6. We successfully provided the executive team listings that have the highest revenue by room type. Surprisingly "Furnished room in Astoria" which is a private room had the 2nd highest revenue amongst all listings.
+7. The executive team wanted to find out which listings they need to send an email that are not performing well and have an average price that is 75% above the average in that neighborhood. We succesfully provided the executive team listings that fit this category in order for Airbnb to help its hosts increase their revenue and for Airbnb corporate to collect more in fees. 
+
+
+
+
+
 ## Exploaratory Data Analysis
 Let's limit the dataset to 20 rows for now and view the columns we have
 
