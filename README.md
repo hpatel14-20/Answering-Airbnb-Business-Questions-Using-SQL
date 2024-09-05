@@ -102,23 +102,68 @@ Now we will move to 4 business questions received from upper management.
 
 1. The airbnb executive team that overlooks NYC listings wants to know: What listings are the most problematic and generate lower revenues?
 
-code and screeshot 
+``` sql
+SELECT 
+   name, room_type, host_name, availability_365 / 12 AS Avg_avail
+FROM 
+    Airbnb_NYC 
+WHERE 
+    availability_365 / 12 >= 15
+Order By Avg_avail DESC;
+```
+
+<img width="967" alt="Screenshot 2024-09-04 at 9 44 00 PM" src="https://github.com/user-attachments/assets/f0044898-77a1-4ae5-82a4-fc7edb2f0a11">
+
 
 
 2. The executive team also wants to know what percent of listings are problematic (more than 15 days availability in a month)? The team said anything above 10% is concerning.
 
-code and screenshot
+```sql
+SELECT 
+    COUNT(*) * 100.0 / (SELECT COUNT(*) FROM Airbnb_NYC) AS percentage
+FROM 
+    Airbnb_NYC 
+WHERE 
+    availability_365 / 12 >= 15;
+```
+
+<img width="698" alt="Screenshot 2024-09-04 at 9 45 18 PM" src="https://github.com/user-attachments/assets/bbc992db-b849-4513-84de-d537716cbb75">
 
 
 3. The executive team also wants to know what listings are the top 20 performers by room type?
 
-code and screenshot
+```sql
+SELECT price * (365 - availability_365) AS Revenue, name, room_type
+FROM Airbnb_NYC
+GROUP BY name
+ORDER BY Revenue DESC limit 20;
+```
+
+<img width="1107" alt="Screenshot 2024-09-04 at 9 47 08 PM" src="https://github.com/user-attachments/assets/f2fe34a8-8619-463a-a3fe-0ee8cb611dab">
+
 
 
 4. Lastly, the executive team wants the listings that have an avg monthly availability above 15 but also have a price that is 75% above average by neighborhood. They would like to send all of these listings an email of how they can increase their revenue or that their price is 75% higher than the average and consider lowering. Age Bracket but we would also be mindful of the neighborhood
 
-code and screenshot
+``` sql
+SELECT 
+    name,
+    neighbourhood,
+    price
+FROM 
+    Airbnb_NYC
+WHERE 
+    monthly_avg_avail > 15 
+    AND price > (
+        SELECT AVG(price) * 1.75
+        FROM Airbnb_NYC AS subquery
+        WHERE subquery.neighbourhood = Airbnb_NYC.neighbourhood
+    )
+ORDER BY price DESC Limit 20;
+```
 
+
+<img width="876" alt="Screenshot 2024-09-04 at 9 48 59 PM" src="https://github.com/user-attachments/assets/4aa397ae-dbf4-46c1-ac67-7c57e0077233">
 
 
 
