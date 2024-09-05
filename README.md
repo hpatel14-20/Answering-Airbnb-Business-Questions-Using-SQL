@@ -64,6 +64,9 @@ ORDER BY Room_Type_Availability ;
 
 <img width="731" alt="Screenshot 2024-09-04 at 9 37 39 PM" src="https://github.com/user-attachments/assets/dcec65d4-72f5-4e02-9d45-2bccf9364ee8">
 
+<img width="464" alt="Screenshot 2024-09-04 at 9 39 36 PM" src="https://github.com/user-attachments/assets/641efb60-f03b-48bf-8d7e-601f274b8add">
+
+
 
 Entire homes make up 52% of all listings, Private rooms make up 46% and shared rooms make up 2%.
 
@@ -71,13 +74,26 @@ Entire homes are available 52% of the time, Private rooms 45% and shared rooms 3
 
 Next we will see if there is a correlation between number of reviews and availability in a 365 day period:
 
-code and screenshot
+``` sql
+SELECT CORR(number_of_reviews, availability_365) AS correlation_coefficient_review_count
+FROM Airbnb_NYC;
+```
+
+<img width="760" alt="Screenshot 2024-09-04 at 9 40 57 PM" src="https://github.com/user-attachments/assets/aba86e3b-22f6-47d5-a4cd-30a38f0e991b">
+
 
 The correlation is very low. Let's see if there is a correlation between price and availability in a 365 day period:
 
-code and screenshot
+``` sql
+SELECT CORR(price, availability_365) AS correlation_coefficient_price
+FROM Airbnb_NYC;
+```
+
+<img width="686" alt="Screenshot 2024-09-04 at 9 42 03 PM" src="https://github.com/user-attachments/assets/b1abf8ec-5447-40aa-b4b9-1f7d46e8c026">
+
 
 The correlation is also really low.
+
 
 
 ## Business Issues:
