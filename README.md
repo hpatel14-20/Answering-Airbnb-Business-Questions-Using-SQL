@@ -1,11 +1,16 @@
 ## Key Takeaways
+Exploratory:
+
 1. The top 3 most expensive neighbhorhoods are Fort Wadsworth, Woodrow and Tribeca. This helps the executive team understand the most expensive places to stay in NYC. 
 2. The cheapest neighbhorhoods are Bull's Head, Hunts Point and Tremon. This helps the executive team understand the cheapest places to stay in NYC. 
 3. The executive team asked if there was a correlation between availability, price/number of reviews to see if it is worth pulling specific listings related to these variables. There is no correlation betwee the price or number of reviews and availability in a 365 day period.
-4. The executive team asked what listings have an average monthly availability of greater than 15 (available for more than half the month). We successfully extracted listings that fall in this category for the team to flag these listings. 
-5. The executive team also needed to know what % of listings have an average availability greater than 15. 30% of listings have a average monthly availability greater than 15 which is alot. This informs the executive team there is room for growth with the current listings they currently have. 
-6. The executive team also wanted listings that have the highest revenue by room type. To calculate revenue we took 365 days and subtracted it by the number of available days for a booking to get the number of booked days and then multiplied that by price. We successfully provided the executive team listings that have the highest revenue by room type. Surprisingly "Furnished room in Astoria" which is a private room had the 2nd highest revenue amongst all listings.
-7. Lastly, the executive team wanted to find out which listings they need to send an email and promote that have an average monthly availability above 15 a price that is 75% above the average in that neighborhood. We succesfully provided the executive team listings that fit this category in order for Airbnb to help its hosts increase their revenue and for Airbnb corporate to collect more in fees. 
+
+Answering Specific Business Issues:
+
+5. The executive team asked what listings have an average monthly availability of greater than 15 (available for more than half the month). We successfully extracted listings that fall in this category for the team to flag these listings. 
+6. The executive team also needed to know what % of listings have an average availability greater than 15. 30% of listings have a average monthly availability greater than 15 which is alot. This informs the executive team there is room for growth with the current listings they currently have. 
+7. The executive team also wanted listings that have the highest revenue by room type. To calculate revenue we took 365 days and subtracted it by the number of available days for a booking to get the number of booked days and then multiplied that by price. We successfully provided the executive team listings that have the highest revenue by room type. Surprisingly "Furnished room in Astoria" which is a private room had the 2nd highest revenue amongst all listings.
+8. Lastly, the executive team wanted to find out which listings they need to send an email and promote that have an average monthly availability above 15 a price that is 75% above the average in that neighborhood. We succesfully provided the executive team listings that fit this category in order for Airbnb to help its hosts increase their revenue and for Airbnb corporate to collect more in fees. 
 
 
 
