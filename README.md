@@ -3,7 +3,7 @@ Exploratory:
 
 1. The top 3 most expensive neighbhorhoods are Fort Wadsworth, Woodrow and Tribeca. This helps the executive team understand the most expensive places to stay in NYC. 
 2. The cheapest neighbhorhoods are Bull's Head, Hunts Point and Tremon. This helps the executive team understand the cheapest places to stay in NYC. 
-3. The executive team asked if there was a correlation between availability, price/number of reviews to see if it is worth pulling specific listings related to these variables. There is no correlation betwee the price or number of reviews and availability in a 365 day period.
+3. The executive team asked if there was a correlation between availability, price/number of reviews to see if it is worth pulling specific listings related to these variables. There is no correlation between the price or number of reviews and availability in a 365 day period.
 
 Answering Specific Business Issues:
 
